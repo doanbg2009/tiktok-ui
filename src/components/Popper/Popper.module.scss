@@ -1,4 +1,6 @@
 .wrapper {
+  display: flex; //thế này để kích thuốc nó chiếm trong phần cha
+  flex-direction: column; //theo cột sẽ thành thanh cuộn nếu nhiều
   width: 100%;
   max-height: min((100vh - 96px) - 60px, 734px);
   min-height: 100px;
