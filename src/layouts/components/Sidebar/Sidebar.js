@@ -10,24 +10,26 @@ import {
   LiveIcon,
   LiveActiveIcon,
 } from '~/components/Icons';
+import SuggestedAccounts from '~/components/SuggestedAccounts';
 
 const cx = classNames.bind(styles);
 
 function Sidebar() {
   return (
     <aside className={cx('wrapper')}>
-      <h2>
-        <Menu>
-          <MenuItem title="For You" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
-          <MenuItem
-            title="Following"
-            to={config.routes.following}
-            icon={<UserGroupIcon />}
-            activeIcon={<UserGroupActiveIcon />}
-          />
-          <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
-        </Menu>
-      </h2>
+      <Menu>
+        <MenuItem title="For You" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
+        <MenuItem
+          title="Following"
+          to={config.routes.following}
+          icon={<UserGroupIcon />}
+          activeIcon={<UserGroupActiveIcon />}
+        />
+        <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
+      </Menu>
+
+      <SuggestedAccounts label="Suggested Accounts" />
+      <SuggestedAccounts label="Following Accounts" />
     </aside>
   );
 }
